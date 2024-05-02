@@ -151,6 +151,33 @@
 					"container": "/etc/localtime:ro"
 				}
 			]
+		},
+		{
+			"categories": [
+				"Caméra"
+			],
+			"description": "Go2rtc",
+			"image": "alexxit/go2rtc",
+			"name": "go2rtc",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "go2rtc",
+			"type": 1,
+			"network": "host",
+			"privileged": true,
+			"env": [
+				{
+			                "name": "TZ",
+			                "label": "TZ",
+							"default": "Europe/Paris"
+	             		}
+	            	],
+			"volumes": [
+				{
+					"bind": " /home/docker/go2rtc",
+					"container": "/config"
+				}
+			]
 		}
 
 	]
