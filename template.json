@@ -115,6 +115,42 @@
 					"container": "/source"
 				}
 			]
+		},
+		{
+			"categories": [
+				"Utilitaire"
+			],
+			"description": "Esphome",
+			"image": "ghcr.io/esphome/esphome",
+			"logo": "https://cdn.icon-icons.com/icons2/3914/PNG/512/esphome_logo_icon_248927.png",
+			"name": "esphome",
+			"platform": "linux",
+			"restart_policy": "always",
+			"title": "esphome",
+			"type": 1,
+			"network": "host",
+			"privileged": true,
+			"env": [
+				{
+			                "name": "USERNAME",
+			                "label": "USERNAME"
+	             		},
+				{
+			                "name": "PASSWORD",
+			                "label": "PASSWORD"
+			        }
+	            	],
+			"volumes": [
+				{
+					"bind": " /home/docker/esphome/config",
+					"container": "/config"
+				},
+				
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime:ro"
+				}
+			]
 		}
 
 	]
