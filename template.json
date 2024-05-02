@@ -7,7 +7,7 @@
 			],
 			"description": "Uptime Kuma est un outil de surveillance open source. Il vous permet de surveiller les services via HTTP/S, TCP, DNS et d'autres protocoles. Vous pouvez recevoir des alertes de notification des temps d'arrêt et même créer des pages d'état personnalisées pour vos utilisateurs.",
 			"image": "louislam/uptime-kuma:latest",
-			"logo": "https://images.opencollective.com/uptime-kuma/29c5113/logo/256.png",
+			"logo": "https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg",
 			"name": "uptime-kuma",
 			"platform": "linux",
 			"ports": [
