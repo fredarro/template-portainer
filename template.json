@@ -1,0 +1,121 @@
+{
+	"version": "2",
+	"templates": [
+		{
+			"categories": [
+				"Supervision"
+			],
+			"description": "Uptime Kuma est un outil de surveillance open source. Il vous permet de surveiller les services via HTTP/S, TCP, DNS et d'autres protocoles. Vous pouvez recevoir des alertes de notification des temps d'arrêt et même créer des pages d'état personnalisées pour vos utilisateurs.",
+			"image": "louislam/uptime-kuma:latest",
+			"logo": "https://github.com/louislam/uptime-kuma/blob/master/public/icon.svg",
+			"name": "uptime-kuma",
+			"platform": "linux",
+			"ports": [
+				"3001:3001/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Uptime-Kuma",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/docker/uptime-kuma/data",
+					"container": "/app/data"
+				}
+			]
+		},
+		{
+			"categories": [
+				"outils"
+			],
+			"description": "Tableau de démarrage",
+			"image": "lissy93/dashy:latest",
+			"logo": "https://dashy.to/img/dashy.png",
+			"name": "dashy",
+			"platform": "linux",
+			"ports": [
+				"4000:8080"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Dashy",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/home/docker/dashy/conf.yml",
+					"container": "/app/user-data/conf.yml"
+				},
+				{
+					"bind": "/home/docker/dashy/icons",
+					"container": "/app/public/item-icons/"
+				}
+			],
+			"env": [
+				{
+					"name": "NODE_ENV",
+					"label": "NODE_ENV",
+					"default": "production"
+				},
+				{
+			                "name": "UID",
+			                "label": "UID",
+			                "default": "1000"
+	             		},
+				{
+			                "name": "GID",
+			                "label": "GID",
+			                "default": "1000"
+			        }
+	            	],
+	            	"labels": [
+		                {
+					"name": "diun.enable",
+					"value": "true"
+		                }
+	            	]
+		},
+		{
+			"categories": [
+				"Backup"
+			],
+			"description": "Permet de faire les backup des container",
+			"image": "lscr.io/linuxserver/duplicati",
+			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/duplicati-icon.png",
+			"name": "duplicati",
+			"platform": "linux",
+			"ports": [
+				"8200:8200"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "duplicati",
+			"type": 1,
+			"env": [
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Europe/Paris"
+				},
+				{
+			                "name": "PUID",
+			                "label": "PUID",
+			                "default": "0"
+	             		},
+				{
+			                "name": "PGID",
+			                "label": "PGID",
+			                "default": "0"
+			        }
+	            	],
+			"volumes": [
+				{
+					"bind": "/home/docker/duplicaty/config",
+					"container": "/config"
+				},
+				
+				{
+					"bind": "/home/docker",
+					"container": "/source"
+				}
+			]
+		}
+
+	]
+}
