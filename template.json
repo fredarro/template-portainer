@@ -178,6 +178,36 @@
 					"container": "/config"
 				}
 			]
+		},
+		{
+			"type": 3,
+			"title": "teste",
+			"name": "teste",
+			"categories": [
+				"test"
+			],
+			"description": "Afaire",
+			"logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/immich-logo.svg",
+			"env": [
+				{
+					"label": "user",
+					"name": "user"
+				},
+				{
+					"label": "password",
+					"name": "password"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/esphome"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+			"stackfile": "esphome/docker-compose.yml",
+			"url": "https://github.com/fredarro/compose"
+			}
 		}
 
 	]
