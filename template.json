@@ -198,6 +198,11 @@
 					"name": "password"
 				},
 				{
+					"label": "name-container",
+					"name": "name-container",
+					"default": "esphome"
+				},
+				{
 					"label": "folder",
 					"name": "folder",
 					"default": "/home/docker/esphome"
