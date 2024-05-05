@@ -222,7 +222,8 @@
 			],
 			"platform": "linux",
 			"repository": {
-				"stackfile": "dashy/docker-compose.yml"
+				"stackfile": "dashy/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
 			}
 		}
 	]
