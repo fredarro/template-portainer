@@ -305,7 +305,8 @@
 				{
 					"label": "port_websockets",
 					"name": "port_websockets",
-					"default": "9001"
+					"default": "9001",
+					"description": "Port acces websockets"
 				},
 				{
 					"label": "name_container",
