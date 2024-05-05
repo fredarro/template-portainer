@@ -108,6 +108,35 @@
 				"stackfile": "esphome/docker-compose.yml",
 				"url": "https://github.com/fredarro/template-portainer"
 			}
+		},
+		{
+			"type": 3,
+			"title": "go2rtc",
+			"name": "go2rtc",
+			"categories": ["test"],
+			"description": "go2rtc",
+			"env": [
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "go2rtc"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/go2rtc"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"default": "Europe/Paris"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "go2rtc/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
 		}
 	]
 }
