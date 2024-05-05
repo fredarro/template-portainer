@@ -2,12 +2,12 @@ version: "3.8"
 services:
   dashy:
     image: lissy93/dashy
-    container_name: dashy
+    container_name: ${name_container}
     volumes:
-      - /home/docker/dashy/conf.yml:/app/user-data/conf.yml
+      - ${folder}/conf.yml:/app/user-data/conf.yml
       - /home/docker/dashy/icons:/app/public/item-icons/
     ports:
-      - 4000:8080
+      - ${port}:8080
     environment:
       - NODE_ENV=production
       - UID=1000

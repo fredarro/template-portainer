@@ -210,8 +210,8 @@
 					"default": "4000"
 				},
 				{
-					"label": "name-container",
-					"name": "name-container",
+					"label": "name_container",
+					"name": "name_container",
 					"default": "dashy"
 				},
 				{
