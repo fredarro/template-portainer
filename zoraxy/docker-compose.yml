@@ -1,0 +1,19 @@
+version: '3'
+services:
+  zoraxy-docker:
+    image: ghcr.io/barto95100/zoraxy-dns-challenge:v3.0.3
+    container_name: ${name_container}
+    volumes:
+      - ${folder}/conf:/opt/zoraxy/src/conf
+    ports:
+      - 80:80
+      - 443:443
+      - ${port}:8000/tcp
+    environment:
+      - DOMAIN_NAME=${DOMAIN_NAME}
+      - EMAIL_LETSENCRYPT=${EMAIL_LETSENCRYPT}
+      - OVH_ENDPOINT=${OVH_ENDPOINT}
+      - OVH_APPLICATION_KEY=${OVH_APPLICATION_KEY}
+      - OVH_APPLICATION_SECRET=${OVH_APPLICATION_SECRET}
+      - OVH_CONSUMER_KEY=${OVH_CONSUMER_KEY}
+      - TZ=${TZ}

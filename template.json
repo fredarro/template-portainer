@@ -287,6 +287,71 @@
 				"stackfile": "mariadb/docker-compose.yml",
 				"url": "https://github.com/fredarro/template-portainer"
 			}
+		},
+		{
+			"type": 3,
+			"title": "zoraxy",
+			"name": "zoraxy",
+			"categories": ["test"],
+			"description": "zoraxy",
+			"logo": "https://www.myqnap.org/wp-content/uploads/zoraxy-logo.png",
+			"env": [
+				{
+					"label": "port",
+					"name": "port",
+					"default": "8001"
+				},
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "zoraxy"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/zoraxy"
+				},
+				{
+					"label": "DOMAIN_NAME",
+					"name": "DOMAIN_NAME",
+					"default": "NDD.ovh"
+				},
+				{
+					"label": "EMAIL_LETSENCRYPT",
+					"name": "EMAIL_LETSENCRYPT",
+					"default": "hacf@gmail.com"
+				},
+				{
+					"label": "OVH_ENDPOINT",
+					"name": "OVH_ENDPOINT",
+					"default": "ovh-eu"
+				},
+				{
+					"label": "OVH_APPLICATION_KEY",
+					"name": "OVH_APPLICATION_KEY",
+					"default": "xxxxxxxxxxxxxxx"
+				},
+				{
+					"label": "OVH_APPLICATION_SECRET",
+					"name": "OVH_APPLICATION_SECRET",
+					"default": "xxxxxxxxxxxxxxx"
+				},
+				{
+					"label": "OVH_CONSUMER_KEY",
+					"name": "OVH_CONSUMER_KEY",
+					"default": "xxxxxxxxxxxxxxx"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"default": "Europe/Paris"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "zoraxy/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
 		}
 	]
 }
