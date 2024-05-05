@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    influxdb2:
+        container_name: ${name_container}
+        ports:
+            - ${port}:8086
+        volumes: 
+          - /${folder}:/var/lib/influxdb2
+        image: 'influxdb:2.6.1'
+        environment:
+          TZ: ${TZ}
+        restart: always

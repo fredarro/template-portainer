@@ -197,6 +197,36 @@
 				"stackfile": "guacamole/docker-compose.yml",
 				"url": "https://github.com/fredarro/template-portainer"
 			}
+		},
+		{
+			"type": 3,
+			"title": "influxdb2",
+			"name": "influxdb2",
+			"categories": ["test"],
+			"description": "influxdb2",
+			"logo": "https://www.niagaramarketplace.com/media/catalog/product/cache/f7420c7cfd302c73440e50c5a6066c3c/m/a/marketplace_icons_13_.png",
+			"env": [
+				{
+					"label": "port",
+					"name": "port",
+					"default": "8086"
+				},
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "influxdb2"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/influxdb2"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "influxdb2/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
 		}
 	]
 }
