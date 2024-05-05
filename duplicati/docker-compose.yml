@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati
+    container_name: ${name_container}
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=${TZ}
+    volumes:
+      - ${folder}/config:/config
+      - ${source}:/source
+    ports:
+      - ${port}:8200
+    restart: unless-stopped

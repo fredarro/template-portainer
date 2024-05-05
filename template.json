@@ -2,197 +2,42 @@
 	"version": "2",
 	"templates": [
 		{
-			"categories": ["Supervision"],
-			"description": "Uptime Kuma est un outil de surveillance open source. Il vous permet de surveiller les services via HTTP/S, TCP, DNS et d'autres protocoles. Vous pouvez recevoir des alertes de notification des temps d'arrêt et même créer des pages d'état personnalisées pour vos utilisateurs.",
-			"image": "louislam/uptime-kuma:latest",
-			"logo": "https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg",
-			"name": "uptime-kuma",
-			"platform": "linux",
-			"ports": ["3001:3001/tcp"],
-			"restart_policy": "unless-stopped",
-			"title": "Uptime-Kuma",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/docker/uptime-kuma/data",
-					"container": "/app/data"
-				}
-			]
-		},
-		{
-			"categories": ["outils"],
-			"description": "Tableau de démarrage",
-			"image": "lissy93/dashy:latest",
-			"logo": "https://dashy.to/img/dashy.png",
-			"name": "dashy",
-			"platform": "linux",
-			"ports": ["4000:8080"],
-			"restart_policy": "unless-stopped",
-			"title": "Dashy",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/docker/dashy/conf.yml",
-					"container": "/app/user-data/conf.yml"
-				},
-				{
-					"bind": "/home/docker/dashy/icons",
-					"container": "/app/public/item-icons/"
-				}
-			],
-			"env": [
-				{
-					"name": "NODE_ENV",
-					"label": "NODE_ENV",
-					"default": "production"
-				},
-				{
-					"name": "UID",
-					"label": "UID",
-					"default": "1000"
-				},
-				{
-					"name": "GID",
-					"label": "GID",
-					"default": "1000"
-				}
-			],
-			"labels": [
-				{
-					"name": "diun.enable",
-					"value": "true"
-				}
-			]
-		},
-		{
-			"categories": ["Backup"],
-			"description": "Permet de faire les backup des container",
-			"image": "lscr.io/linuxserver/duplicati",
-			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/duplicati-icon.png",
-			"name": "duplicati",
-			"platform": "linux",
-			"ports": ["8200:8200"],
-			"restart_policy": "unless-stopped",
-			"title": "duplicati",
-			"type": 1,
-			"env": [
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Paris"
-				},
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "0"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "0"
-				}
-			],
-			"volumes": [
-				{
-					"bind": "/home/docker/duplicaty/config",
-					"container": "/config"
-				},
-
-				{
-					"bind": "/home/docker",
-					"container": "/source"
-				}
-			]
-		},
-		{
-			"categories": ["Utilitaire"],
-			"description": "Esphome",
-			"image": "ghcr.io/esphome/esphome",
-			"logo": "https://cdn.icon-icons.com/icons2/3914/PNG/512/esphome_logo_icon_248927.png",
-			"name": "esphome",
-			"platform": "linux",
-			"restart_policy": "always",
-			"title": "esphome",
-			"type": 1,
-			"network": "host",
-			"privileged": true,
-			"env": [
-				{
-					"name": "USERNAME",
-					"label": "USERNAME"
-				},
-				{
-					"name": "PASSWORD",
-					"label": "PASSWORD"
-				}
-			],
-			"volumes": [
-				{
-					"bind": " /home/docker/esphome/config",
-					"container": "/config"
-				},
-
-				{
-					"bind": "/etc/localtime",
-					"container": "/etc/localtime:ro"
-				}
-			]
-		},
-		{
-			"categories": ["Caméra"],
-			"description": "Go2rtc",
-			"image": "alexxit/go2rtc",
-			"name": "go2rtc",
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "go2rtc",
-			"type": 1,
-			"network": "host",
-			"privileged": true,
-			"env": [
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Paris"
-				}
-			],
-			"volumes": [
-				{
-					"bind": " /home/docker/go2rtc",
-					"container": "/config"
-				}
-			]
-		},
-		{
 			"type": 3,
-			"title": "teste",
-			"name": "teste",
+			"title": "duplicati",
+			"name": "duplicati",
 			"categories": ["test"],
-			"description": "Afaire",
-			"logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/immich-logo.svg",
+			"description": "duplicati",
+			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/duplicati-icon.png",
 			"env": [
 				{
-					"label": "user",
-					"name": "user"
+					"label": "port",
+					"name": "port",
+					"default": "8200"
 				},
 				{
-					"label": "password",
-					"name": "password"
-				},
-				{
-					"label": "name-container",
-					"name": "name-container",
-					"default": "esphome"
+					"label": "name_container",
+					"name": "name_container",
+					"default": "duplicati"
 				},
 				{
 					"label": "folder",
 					"name": "folder",
-					"default": "/home/docker/esphome"
+					"default": "/home/docker/duplicati"
+				},
+				{
+					"label": "source",
+					"name": "source",
+					"default": "/home/docker"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"default": "Europe/Paris"
 				}
 			],
 			"platform": "linux",
 			"repository": {
-				"stackfile": "esphome/docker-compose.yml",
+				"stackfile": "duplicati/docker-compose.yml",
 				"url": "https://github.com/fredarro/compose"
 			}
 		},
