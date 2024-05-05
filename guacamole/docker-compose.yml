@@ -1,0 +1,13 @@
+version: "3"
+services:
+  guacamole:
+    image: jwetzell/guacamole
+    container_name: ${name_container}
+    volumes:
+      - ${folder}/postgres:/config
+    ports:
+      - ${port}:8080
+    restart: always
+volumes:
+  postgres:
+    driver: local

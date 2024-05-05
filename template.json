@@ -167,6 +167,36 @@
 				"stackfile": "grafana/docker-compose.yml",
 				"url": "https://github.com/fredarro/template-portainer"
 			}
+		},
+		{
+			"type": 3,
+			"title": "guacamole",
+			"name": "guacamole",
+			"categories": ["test"],
+			"description": "guacamole",
+			"logo": "https://upload.wikimedia.org/wikipedia/commons/3/31/Apache_Guacamole_logo.png",
+			"env": [
+				{
+					"label": "port",
+					"name": "port",
+					"default": "8080"
+				},
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "guacamole"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/grafana"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "guacamole/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
 		}
 	]
 }
