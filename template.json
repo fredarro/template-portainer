@@ -113,6 +113,7 @@
 			"type": 3,
 			"title": "go2rtc",
 			"name": "go2rtc",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/go2rtc.png",
 			"categories": ["test"],
 			"description": "go2rtc",
 			"env": [
