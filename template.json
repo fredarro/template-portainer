@@ -7,7 +7,7 @@
 			"name": "duplicati",
 			"categories": ["test"],
 			"description": "duplicati",
-			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/duplicati-icon.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/duplicati.png",
 			"env": [
 				{
 					"label": "port",
@@ -47,7 +47,7 @@
 			"name": "Dashy",
 			"categories": ["test"],
 			"description": "Dashy",
-			"logo": "https://dashy.to/img/dashy.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/dashy.png",
 			"env": [
 				{
 					"label": "port",
@@ -77,7 +77,7 @@
 			"name": "esphome",
 			"categories": ["test"],
 			"description": "esphome",
-			"logo": "https://cdn.icon-icons.com/icons2/3914/PNG/512/esphome_logo_icon_248927.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/esphome.svg",
 			"env": [
 				{
 					"label": "port",
@@ -144,7 +144,7 @@
 			"name": "grafana",
 			"categories": ["test"],
 			"description": "grafana",
-			"logo": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Grafana_logo.png?20170804201233",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/grafana.svg",
 			"env": [
 				{
 					"label": "name_container",
@@ -174,7 +174,7 @@
 			"name": "guacamole",
 			"categories": ["test"],
 			"description": "guacamole",
-			"logo": "https://upload.wikimedia.org/wikipedia/commons/3/31/Apache_Guacamole_logo.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/guacamole.svg",
 			"env": [
 				{
 					"label": "port",
@@ -204,7 +204,7 @@
 			"name": "influxdb2",
 			"categories": ["test"],
 			"description": "influxdb2",
-			"logo": "https://www.niagaramarketplace.com/media/catalog/product/cache/f7420c7cfd302c73440e50c5a6066c3c/m/a/marketplace_icons_13_.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/influxdb.svg",
 			"env": [
 				{
 					"label": "port",
@@ -234,7 +234,7 @@
 			"name": "mariadb",
 			"categories": ["test"],
 			"description": "mariadb",
-			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/mariadb-icon.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/mariadb.svg",
 			"env": [
 				{
 					"label": "port",
@@ -294,7 +294,7 @@
 			"name": "mosquitto",
 			"categories": ["test"],
 			"description": "mosquitto",
-			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/mariadb-icon.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/mosquitto.png",
 			"env": [
 				{
 					"label": "port",
@@ -329,7 +329,7 @@
 			"name": "zoraxy",
 			"categories": ["test"],
 			"description": "zoraxy",
-			"logo": "https://www.myqnap.org/wp-content/uploads/zoraxy-logo.png",
+			"logo": "https://raw.githubusercontent.com/fredarro/template-portainer/master/icons/zoraxy.svg",
 			"env": [
 				{
 					"label": "port",
