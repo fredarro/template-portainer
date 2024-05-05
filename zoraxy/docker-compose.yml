@@ -1,7 +1,7 @@
 version: '3'
 services:
   zoraxy-docker:
-    image: ghcr.io/barto95100/zoraxy-dns-challenge:v3.0.3
+    image: ghcr.io/barto95100/zoraxy:latest
     container_name: ${name_container}
     volumes:
       - ${folder}/conf:/opt/zoraxy/src/conf
