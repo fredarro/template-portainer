@@ -189,7 +189,7 @@
 				{
 					"label": "folder",
 					"name": "folder",
-					"default": "/home/docker/grafana"
+					"default": "/home/docker/guacamole"
 				}
 			],
 			"platform": "linux",
