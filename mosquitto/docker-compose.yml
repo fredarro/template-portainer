@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  mqtt:
+    container_name: ${name_container}
+    image: eclipse-mosquitto
+    restart: unless-stopped
+    volumes:
+      - ${folder}/config:/mosquitto/config
+      - ${folder}/data:/mosquitto/data
+      - ${folder}/log:/mosquitto/log
+    ports:
+      - ${port}:1883
+      - ${port_websockets}:9001

@@ -290,6 +290,41 @@
 		},
 		{
 			"type": 3,
+			"title": "mosquitto",
+			"name": "mosquitto",
+			"categories": ["test"],
+			"description": "mosquitto",
+			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/mariadb-icon.png",
+			"env": [
+				{
+					"label": "port",
+					"name": "port",
+					"default": "1883"
+				},
+				{
+					"label": "port_websockets",
+					"name": "port_websockets",
+					"default": "9001"
+				},
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "mosquitto"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/mosquitto"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "mosquitto/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
+		},
+		{
+			"type": 3,
 			"title": "zoraxy",
 			"name": "zoraxy",
 			"categories": ["test"],
