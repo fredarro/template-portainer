@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  esphome:
+    container_name: ${name_container}
+    image: ghcr.io/esphome/esphome
+    volumes:
+      - ${folder}/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    privileged: true
+    network_mode: host
+    environment:
+      - USERNAME=${user}
+      - PASSWORD=${password}

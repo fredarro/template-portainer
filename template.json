@@ -225,6 +225,39 @@
 				"stackfile": "dashy/docker-compose.yml",
 				"url": "https://github.com/fredarro/template-portainer"
 			}
+		},
+		{
+			"type": 3,
+			"title": "esphome",
+			"name": "esphome",
+			"categories": ["test"],
+			"description": "esphome",
+			"logo": "https://cdn.icon-icons.com/icons2/3914/PNG/512/esphome_logo_icon_248927.png",
+			"env": [
+				{
+					"label": "user",
+					"name": "user"
+				},
+				{
+					"label": "password",
+					"name": "password"
+				},
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "esphome"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/esphome"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "esphome/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
 		}
 	]
 }
