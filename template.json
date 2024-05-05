@@ -227,6 +227,66 @@
 				"stackfile": "influxdb2/docker-compose.yml",
 				"url": "https://github.com/fredarro/template-portainer"
 			}
+		},
+		{
+			"type": 3,
+			"title": "mariadb",
+			"name": "mariadb",
+			"categories": ["test"],
+			"description": "mariadb",
+			"logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/mariadb-icon.png",
+			"env": [
+				{
+					"label": "port",
+					"name": "port",
+					"default": "3306"
+				},
+				{
+					"label": "name_container",
+					"name": "name_container",
+					"default": "mariadb"
+				},
+				{
+					"label": "folder",
+					"name": "folder",
+					"default": "/home/docker/mariadb"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"default": "1000"
+				},
+				{
+					"label": "GUID",
+					"name": "GUID",
+					"default": "1000"
+				},
+				{
+					"label": "MYSQL_ROOT_PASSWORD",
+					"name": "MYSQL_ROOT_PASSWORD",
+					"default": "TheBestHACF"
+				},
+				{
+					"label": "MYSQL_DATABASE",
+					"name": "MYSQL_DATABASE",
+					"default": "homeassistant"
+				},
+				{
+					"label": "MYSQL_USER",
+					"name": "MYSQL_USER",
+					"default": "hacf"
+				},
+				{
+					"label": "MYSQL_PASSWORD",
+					"name": "MYSQL_PASSWORD",
+					"default": "TheBestHACF"
+				}
+			],
+			"platform": "linux",
+			"repository": {
+				"stackfile": "mariadb/docker-compose.yml",
+				"url": "https://github.com/fredarro/template-portainer"
+			}
 		}
 	]
 }

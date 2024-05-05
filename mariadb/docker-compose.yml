@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  mariadb:
+    container_name: ${name_container}
+    image: yobasystems/alpine-mariadb
+    restart: always
+    environment:
+      MARIADB_AUTO_UPGRADE: 1
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      PUID: ${PUID}
+      PGID: ${GUID}
+    volumes:
+      - ${folder}:/etc/mysql/conf.d
+      - ${folder}:/var/lib/mysql
+    ports:
+      - ${port}:3306 
+ 
+
