@@ -5,7 +5,7 @@ services:
     container_name: ${name_container}
     volumes:
       - ${folder}/conf.yml:/app/user-data/conf.yml
-      - /home/docker/dashy/icons:/app/public/item-icons/
+      - ${folder}/icons:/app/public/item-icons/
     ports:
       - ${port}:8080
     environment:
