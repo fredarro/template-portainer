@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  grafana:
+    container_name: ${name_container}
+    image: grafana/grafana-oss:latest
+    restart: always
+    ports:
+      - ${port}:3000
+    user: root
+    environment:
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_SECURITY_COOKIE_SAMESITE=none
+      - GF_SECURITY_ALLOW_EMBEDDING=true
+    volumes:
+      - ${folder}/grafana_data:/var/lib/grafana
+      - ${folder}/provisioning:/etc/grafana/provisioning
