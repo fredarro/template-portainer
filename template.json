@@ -235,6 +235,11 @@
 			"logo": "https://cdn.icon-icons.com/icons2/3914/PNG/512/esphome_logo_icon_248927.png",
 			"env": [
 				{
+					"label": "port",
+					"name": "port",
+					"default": "6052"
+				},
+				{
 					"label": "user",
 					"name": "user"
 				},

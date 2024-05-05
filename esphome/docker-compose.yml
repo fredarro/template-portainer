@@ -3,6 +3,8 @@ services:
   esphome:
     container_name: ${name_container}
     image: ghcr.io/esphome/esphome
+    ports:
+      - ${port}:6052
     volumes:
       - ${folder}/config:/config
       - /etc/localtime:/etc/localtime:ro
